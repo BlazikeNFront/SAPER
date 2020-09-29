@@ -2,6 +2,11 @@
     --main-color:#c0c0c0;
     --main-color-dark:#808080;
     --alarm-color:#f80000;
+
+    --cell-size:20px;
+    --cells-in-row:8;
+
+    --game-max-width:calc(var(--cell-size) * var(--cells-in-row) + 6px)
 }
 
 *,
@@ -91,6 +96,7 @@ main {
     color:black;
     transition:background-color 0.5s ease-in,color 0.5s ease-in,border-color 0.5s ease-in;
     
+    
 }
 .modal__button:hover {
 background-color:black;
@@ -106,11 +112,24 @@ border-color:gray;
     display:flex;
     flex-wrap: wrap;
     margin:20px auto;
-    width: 169px;
+    width: var(--game-max-width);
    
 }
 .cell {
-    width:20px;
-    height:20px;
+    width:var(--cell-size);
+    height:var(--cell-size);
     cursor: pointer;
+   background-color:none;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.border--revealed {
+    border:3px solid;
+    border-color: black;
+}
+
+.cell--is-flag {
+    background-image: url('/icons/flag.svg');
+    
 }
