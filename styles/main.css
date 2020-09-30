@@ -2,7 +2,14 @@
     --main-color:#c0c0c0;
     --main-color-dark:#808080;
     --alarm-color:#f80000;
-
+    --one-mine:#0200fc;
+    --two-mines:#017e00;
+    --three-mines:#ff0000;
+    --four-mines:#010080;
+    --five-mines:#7f0300;
+    --six-mines:#008080;
+    --seven-mines:#000000;
+    --eight-mines:#808080;
     --cell-size:20px;
     --cells-in-row:8;
 
@@ -122,6 +129,8 @@ border-color:gray;
    background-color:none;
     background-position: center;
     background-repeat: no-repeat;
+    font-size:12px;
+    text-align: center;
 }
 
 .border--revealed {
@@ -132,4 +141,34 @@ border-color:gray;
 .cell--is-flag {
     background-image: url('/icons/flag.svg');
     
+}
+
+.cell--is-mine {
+    background-image: url('/icons/bomb.svg');
+    background-color: var(--alarm-color);
+}
+
+.mine1 {
+    color:var(--one-mine);
+}
+.mine2 {
+    color:var(--two-mines);
+}
+.mine3 {
+    color:var(--three-mines);
+}
+.mine4 {
+    color:var(--four-mines);
+}
+.mine5 {
+    color:var(--five-mines);
+}
+.mine6 {
+    color:var(--six-mines);
+}
+.mine7 {
+    color:var(--seven-mines);
+}
+.mine8 {
+    color:var(--eight-mines);
 }

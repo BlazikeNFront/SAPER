@@ -23,14 +23,23 @@ export class Cell extends GrabDOMElements  {
      this.isRevaled = true;
      this.element.classList.remove('border-concave')
      this.element.classList.add('border--revealed')
+     if(this.isMine){this.element.classList.add('cell--is-mine');
+    return}
+    if(this.value){
+        this.element.textContent = this.value;
+        this.element.classList.add(`mine${this.value}`);
+    }
  }
 
 
  toggleFlag(){
+    
      this.isFlagged = !this.isFlagged;
+     
      this.element.classList.toggle('cell--is-flag')
  }
 
+  
 
 
 
