@@ -11,7 +11,7 @@
     <main>
         <section class = "gameInfo border-convex">
            <div class = 'gameInfo__counter' data-timeCounter>000</div> 
-           <button class="gameInfo__reset border-concave">
+           <button class="gameInfo__reset border-concave" data-button-reset>
                <svg class='gameInfo__icon'>
                <use href= 'icons\spriteLvL.svg#medium'></use>
             </svg>
@@ -25,16 +25,16 @@
         <section class="gamePanel border-convex">
             <p class="gamePanel__difficulty">Select difficulty</p>
             <div class="gamePanel__buttons">
-                <button class="button">Easy</button>
-                <button class="button">Medium</button>
-                <button class="button">Hard</button>
+                <button class="button" data-button-easy>Easy</button>
+                <button class="button" data-button-medium>Medium</button>
+                <button class="button" data-button-hard>Hard</button>
             </div>
         </section>
     </main>
 
-        <section class="modal hide">
-            <p class="modal__Text">EASY WIN</p>
-            <button class="modal__button">RESET</button>
+        <section class="modal hide" data-modal>
+            <p class="modal__Text" data-modal-info>EASY WIN</p>
+            <button class="modal__button" data-modal-button>RESET</button>
         </section>
 
 
